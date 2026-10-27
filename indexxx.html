@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset=”UTF-8”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <title>China – A Land of Endless Discoveries</title>
+
+    <style>
+•	{
+            Margin: 0;
+            Padding: 0;
+            Box-sizing: border-box;
+            Scroll-behavior: smooth;
+        }
+
+        Body {
+            Font-family: Arial, sans-serif;
+            Background-color: #fffaf3;
+            Color: #292323;
+        }
+
+        /* NAVIGATION */
+        Header {
+            Background: #fffaf3;
+            Padding: 20px 7%;
+            Display: flex;
+            Justify-content: space-between;
+            Align-items: center;
+            Flex-wrap: wrap;
+            Gap: 15px;
+        }
+
+        .logo {
+            Color: #940d0d;
+            Font-size: 30px;
+            Font-weight: bold;
+        }
+
+        .logo small {
+            Display: block;
+            Font-size: 10px;
+            Color: #444;
+            Letter-spacing: 2px;
+        }
+
+        Nav a {
+            Text-decoration: none;
+            Color: #292323;
+            Margin-left: 20px;
+            Padding: 10px 15px;
+            Border-radius: 25px;
+        }
+
+        Nav a:hover,
+        Nav a.active {
+            Background: #940d0d;
+            Color: white;
+        }
+
+        /* HOME */
+        .hero {
+            Min-height: 430px;
+            Display: flex;
+            Align-items: center;
+            Padding: 60px 9%;
+            Background:
+                Linear-gradient(90deg,
+                Rgba(255, 239, 215, 0.94),
+                Rgba(255, 239, 215, 0.15)),
+                url(https://images.unsplash.com/photo-1508804185872-c957d9f3b2a4)
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            Max-width: 480px;
+        }
+
+        .hero h3 {
+            Font-size: 25px;
+            Letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            Color: #940d0d;
+            Font-size: clamp(55px, 9vw, 90px);
+            Margin: 10px 0;
+        }
+
+        .hero p {
+            Font-size: 17px;
+            Line-height: 1.7;
+            Margin-bottom: 25px;
+        }
+
+        .btn {
+            Display: inline-block;
+            Background: #940d0d;
+            Color: white;
+            Text-decoration: none;
+            Padding: 14px 25px;
+            Border-radius: 30px;
+        }
+
+        .btn:hover {
+            Background: #650707;
+        }
+
+        /* HIGHLIGHTS */
+        .highlights {
+            Display: grid;
+            Grid-template-columns: repeat(4, 1fr);
+            Padding: 35px 5%;
+            Gap: 20px;
+            Text-align: center;
+        }
+
+        .highlight {
+            Padding: 15px;
+            Border-right: 1px solid #e7d2c0;
+        }
+
+        .highlight:last-child {
+            Border-right: none;
+        }
+
+        .highlight h3 {
+            Color: #940d0d;
+            Margin-bottom: 10px;
+        }
+
+        .highlight p {
+            Line-height: 1.5;
+            Font-size: 14px;
+        }
+
+        /* TOURIST SPOTS */
+        .spots {
+            Padding: 50px 5%;
+            Background: #fff;
+            Text-align: center;
+        }
+
+        .section-title {
+            Color: #940d0d;
+            Font-size: 36px;
+            Margin-bottom: 12px;
+        }
+
+        .section-description {
+            Margin-bottom: 30px;
+            Line-height: 1.6;
+        }
+
+        .spot-container {
+            Display: grid;
+            Grid-template-columns: repeat(4, 1fr);
+            Gap: 20px;
+        }
+
+        .spot-card {
+            Background: #fffaf3;
+            Border-radius: 12px;
+            Overflow: hidden;
+            Box-shadow: 0 4px 15px #00000012;
+            Text-align: left;
+            Transition: 0.3s;
+        }
+
+        .spot-card:hover {
+            Transform: translateY(-5px);
+        }
+
+        .spot-card img {
+            Width: 100%;
+            Height: 190px;
+            Object-fit: cover;
+        }
+
+        .spot-info {
+            Padding: 18px;
+        }
+
+        .spot-info h3 {
+            Color: #940d0d;
+            Margin-bottom: 10px;
+        }
+
+        .spot-info p {
+            Font-size: 14px;
+            Line-height: 1.6;
+        }
+
+        /* ABOUT CHINA */
+        .about {
+            Display: grid;
+            Grid-template-columns: 1fr 1fr;
+            Align-items: center;
+            Gap: 40px;
+            Padding: 60px 7%;
+        }
+
+        .about img {
+            Width: 100%;
+            Height: 330px;
+            Object-fit: cover;
+            Border-radius: 12px;
+        }
+
+        .about h2 {
+            Color: #940d0d;
+            Font-size: 36px;
+            Margin-bottom: 20px;
+        }
+
+        .about p {
+            Line-height: 1.8;
+            Margin-bottom: 25px;
+        }
+
+        /* MAPS */
+        .maps {
+            Padding: 45px 7%;
+            Text-align: center;
+            Background: #f5e8d8;
+        }
+
+        .maps iframe {
+            Width: 100%;
+            Height: 350px;
+            Border: 0;
+            Border-radius: 12px;
+        }
+
+        /* FOOTER */
+        Footer {
+            Background: #780909;
+            Color: white;
+            Padding: 30px 7%;
+            Text-align: center;
+        }
+
+        Footer h2 {
+            Margin-bottom: 15px;
+        }
+
+        Footer a {
+            Color: white;
+            Text-decoration: none;
+            Margin: 10px;
+            Display: inline-block;
+        }
+
+        Footer a:hover {
+            Text-decoration: underline;
+        }
+
+        Footer p {
+            Margin-top: 20px;
+            Font-size: 13px;
+        }
+
+        /* MOBILE DESIGN */
+        @media (max-width: 800px) {
+            Header {
+                Justify-content: center;
+                Text-align: center;
+            }
+
+            Nav {
+                Line-height: 2.5;
+            }
+
+            Nav a {
+                Margin: 3px;
+                Padding: 8px;
+            }
+
+            .hero {
+                Padding: 50px 7%;
+            }
+
+            .highlights,
+            .spot-container {
+                Grid-template-columns: repeat(2, 1fr);
+            }
+
+            .highlight {
+                Border-right: none;
+            }
+
+            .about {
+                Grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .highlights,
+            .spot-container {
+                Grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                Font-size: 55px;
+            }
+
+            .section-title,
+            .about h2 {
+                Font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!—HEADER AND NAVIGATION 
+    <header>
+        <div class=”logo”>
+            CHINA
+            <small>A LAND OF ENDLESS DISCOVERIES</small>
+        </div>
+
+        <nav>
+            <a href=”#home” class=”active”>Home</a>
+            <a href=”#tourist-spots”>Tourist Spot</a>
+            <a href=”#maps”>Maps</a>
+            <a href=”#about”>About Us</a>
+        </nav>
+    </header>
+
+    <!—HOME SECTION 
+    <section class=”hero” id=”home”>
+        <div class=”hero-content”>
+            <h3>WELCOME TO</h3>
+            <h1>CHINA</h1>
+            <p>
+                Explore the rich history, breathtaking landscapes,
+                And vibrant culture of China.
+            </p>
+            <a href=”#tourist-spots” class=”btn”>Discover More →</a>
+        </div>
+    </section>
+
+    <!—CHINA HIGHLIGHTS 
+    <section class=”highlights”>
+        <div class=”highlight”>
+            <h3>🏯 Rich History</h3>
+            <p>Discover ancient dynasties and timeless heritage.</p>
+        </div>
+
+        <div class=”highlight”>
+            <h3>⛰️ Landscapes</h3>
+            <p>Explore beautiful mountains, rivers, and nature.</p>
+        </div>
+
+        <div class=”highlight”>
+            <h3>🎎 Unique Culture</h3>
+            <p>Experience Chinese traditions, festivals, and arts.</p>
+        </div>
+
+        <div class=”highlight”>
+            <h3>🥢 Delicious Cuisine</h3>
+            <p>Discover the wonderful flavors of Chinese food.</p>
+        </div>
+    </section>
+
+    <!—TOURIST SPOTS SECTION 
+    <section class=”spots” id=”tourist-spots”>
+        <h2 class=”section-title”>Featured Destinations</h2>
+        <p class=”section-description”>
+            Discover some of the most famous places in China.
+        </p>
+
+        <div class=”spot-container”>
+
+            <div class=”spot-card”>
+                <img
+                    Src=https://images.unsplash.com/photo-1508804185872-c957d9f3b2a4
+                    Alt=”Great Wall of China”>
+
+                <div class=”spot-info”>
+                    <h3>Great Wall of China</h3>
+                    <p>A famous landmark representing China’s long history.</p>
+                </div>
+            </div>
+
+            <div class=”spot-card”>
+                <img
+                    Src=https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b
+                    Alt=”Traditional Chinese temple”>
+
+                <div class=”spot-info”>
+                    <h3>Temple of Heaven</h3>
+                    <p>A remarkable example of traditional Chinese architecture.</p>
+                </div>
+            </div>
+
+            <div class=”spot-card”>
+                <img
+                    Src=https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2
+                    Alt=”Chinese mountain landscape”>
+
+                <div class=”spot-info”>
+                    <h3>Zhangjiajie</h3>
+                    <p>Famous for its dramatic mountains and natural beauty.</p>
+                </div>
+            </div>
+
+            <div class=”spot-card”>
+                <img
+                    Src=https://images.unsplash.com/photo-1599571234909-29ed5d1321d6
+                    Alt=”Chinese palace”>
+
+                <div class=”spot-info”>
+                    <h3>Forbidden City</h3>
+                    <p>A historic imperial palace in Beijing.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!—MAPS SECTION 
+    <section class=”maps” id=”maps”>
+        <h2 class=”section-title”>Explore China on the Map</h2>
+        <p class=”section-description”>
+            Find China and discover its famous destinations.
+        </p>
+
+        <iframe
+            Src=https://www.google.com/maps?q=China&output=embed
+            Loading=”lazy”
+            Title=”Map of China”>
+        </iframe>
+    </section>
+
+    <!—ABOUT CHINA SECTION 
+    <section class=”about” id=”about”>
+        <img
+            Src=https://images.unsplash.com/photo-1537531383496-f4749b8032c4
+            Alt=”Traditional Chinese buildings”>
+
+        <div>
+            <h2>About China</h2>
+
+            <p>
+                China is a country in East Asia with a long and fascinating
+                History, rich cultural traditions, and beautiful landscapes.
+                From ancient dynasties and historic landmarks to modern cities
+                And peaceful villages, China offers many places to explore.
+            </p>
+
+            <p>
+                Its traditional festivals, architecture, cuisine, and
+                Historical sites make China an interesting destination
+                For travelers and students.
+            </p>
+
+            <a href=”#tourist-spots” class=”btn”>Explore More →</a>
+        </div>
+    </section>
+
+    <!—FOOTER 
+    <footer>
+        <h2>CHINA</h2>
+        <p>A Land of Endless Discoveries</p>
+
+        <div>
+            <a href=”#home”>Home</a>
+            <a href=”#tourist-spots”>Tourist Spot</a>
+            <a href=”#maps”>Maps</a>
+            <a href=”#about”>About Us</a>
+        </div>
+
+        <p>© 2026 China Tourism. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
